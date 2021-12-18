@@ -11,6 +11,9 @@
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.6.1/font/bootstrap-icons.css" />
 
+    <!-- AOS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
     <!-- My CSS -->
     <link rel="stylesheet" href="style.css" />
 
@@ -48,7 +51,7 @@
     <section class="jumbotron text-center">
       <img src="img/dodi.jpg" alt="Dodi Sanjaya" width="200" class="rounded-circle img-thumbnail" />
       <h1 class="display-4">Dodi Sanjaya Butarbutar</h1>
-      <p class="lead">Tech Enthusiast | Software Engineer</p>
+      <p class="lead"></p>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path
           fill="#7bd4cc"
@@ -61,18 +64,18 @@
 
     <!-- About -->
     <section id="about">
-      <div class="container">
+      <div class="container" >
         <div class="row text-center mb-3">
           <div class="col">
             <h2>About Me</h2>
           </div>
         </div>
         <div class="row justify-content-center fs-5 text-center">
-          <div class="col-md-4">
-            <p>I'am Dodi Butarbutar, Student at Del Institute Of Technology, passionate on Computer Security and Software Engineering</p>
+          <div class="col-md-4" data-aos="fade-right" data-aos-duration="1000">
+            <p>My Name is Dodi Sanjaya Butarbutar, Student at Del Institute Of Technology, passionate on Computer Security and Software Engineering</p>
           </div>
-          <div class="col-md-4">
-            <p>During my study I'm participated on Capture the Flag Comptetition and doing Some Projects about Web Development</p>
+          <div class="col-md-4" data-aos="fade-left" data-aos-duration="2000">
+            <p>During My Study I Participated on Several CTF Comptetitions and Worked on several Web Development Projects</p>
           </div>
         </div>
       </div>
@@ -92,47 +95,55 @@
       <div class="container">
         <div class="row text-center mb-3">
           <div class="col">
-            <h2>My Projects</h2>
+            <h2>My Projects & Comptetitive Experience</h2>
           </div>
         </div>
         <div class="row">
           <div class="col-md-4 mb-3">
-            <div class="card">
+            <div class="card" data-aos="flip-left" data-aos-duration="500">
               <img src="img/Projects/1.jpg" class="card-img-top" alt="Project1" />
               <div class="card-body">
-                <p class="card-text">Sistem Informasi Sekolah Dasar</p>
+                <p class="card-text">Information System of Elementary School</p>
               </div>
             </div>
           </div>
           <div class="col-md-4 mb-3">
-            <div class="card">
+            <div class="card" data-aos="flip-left" data-aos-duration="500" data-aos-delay="100">
               <img src="img/Projects/b.jpg" class="card-img-top" alt="Projectb" />
               <div class="card-body">
-                <p class="card-text">Back Office Belanjaikan</p>
+                <p class="card-text">Backoffice Development For Web-Based Belanjaikan</p>
               </div>
             </div>
           </div>
           <div class="col-md-4 mb-3">
-            <div class="card">
+            <div class="card" data-aos="flip-left" data-aos-duration="500" data-aos-delay="150">
               <img src="img/Projects/c.jpg" class="card-img-top" alt="Projectc" />
               <div class="card-body">
-                <p class="card-text">Ransomware Detection System</p>
+                <p class="card-text">Antony Store Procurement System</p>
               </div>
             </div>
           </div>
           <div class="col-md-4 mb-3">
-            <div class="card">
+            <div class="card" data-aos="flip-left" data-aos-duration="500" data-aos-delay="150">
               <img src="img/Projects/4.jpg" class="card-img-top" alt="Project4" />
               <div class="card-body">
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <p class="card-text">Participant CTF Compfest11.</p>
               </div>
             </div>
           </div>
           <div class="col-md-4 mb-3">
-            <div class="card">
+            <div class="card" data-aos="flip-left" data-aos-duration="500" data-aos-delay="150">
+              <img src="img/Projects/3.jpg" class="card-img-top" alt="Project4" />
+              <div class="card-body">
+                <p class="card-text">Participant CTF WreckIT.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-3">
+            <div class="card" data-aos="flip-left" data-aos-duration="500" data-aos-delay="200">
               <img src="img/Projects/5.jpg" class="card-img-top" alt="Project5" />
               <div class="card-body">
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <p class="card-text">Finalist Region CTF KKSI 2019.</p>
               </div>
             </div>
           </div>
@@ -199,7 +210,28 @@
     </footer>
     <!-- Akhir Footer -->
 
+    
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+
+<!-- gsap membuat animasi pada img jumbotron -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/TextPlugin.min.js"></script>
+
+<script>
+  gsap.registerPlugin(TextPlugin);
+  gsap.to('.lead', {duration: 2, delay: 1.5, text: 'Tech Enthusiast | Developer'});
+  gsap.from('.jumbotron img', {duration: 1, y:-100, opacity: 0});
+  gsap.from('.navbar', {duration: 1.5, y: '-100%', opacity: 0});
+  gsap.from('.display-4', {duration: 1, x: -50, opacity: 0, delay: 0.5});
+</script>
+<!-- akhir dari animasi jumbotron -->
+
 
     <script>
       const scriptURL = "https://script.google.com/macros/s/AKfycbxzFJh-LkpbvjYlvqrQ9IelpgFEuzy8AfqUcXi9D1pSf9AnWB6lhEbtzbuDlV3DrdWCKw/exec";
